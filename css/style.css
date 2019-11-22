@@ -1,0 +1,366 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url(../fonts/HelveticaNeueCyr-Light.woff);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/Bebas.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+body {
+  background-image: url(../images/body-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 12px;
+  font-family: "Helvetica";
+}
+a {
+  text-decoration: none;
+  color: #b9b9b9;
+  display: inline-block;
+}
+p {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+}
+h3 {
+  margin: 0;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 78px;
+  position: relative;
+}
+.header__logo > a {
+  font-family: "Bebas";
+  color: #f3af9d;
+  font-size: 36px;
+}
+.header__logo span {
+  color: #e8603c;
+}
+/* 
+mobile menu
+*/
+.header__menu-mini {
+  display: none;
+  margin-right: 25px;
+}
+.menu-mini__btn {
+  background-color: #b9b9b9;
+  width: 25px;
+  height: 4px;
+  transition: all 0.5s;
+  margin-bottom: 4px;
+}
+.menu-mini__btn.active {
+  background-color: #e8663c;
+}
+/* 
+mobile menu end
+*/
+.header__menu li > a {
+  font-family: "Bebas";
+  font-size: 16px;
+  word-spacing: 2px;
+  transition: all 0.5s;
+}
+.header__menu li + li {
+  margin-left: 28px;
+}
+.header__menu li > a:hover {
+  color: #e8663c;
+  transition: all 0.2s;
+}
+/* 
+SLIDER
+*/
+.slider {
+  min-height: 538px;
+  margin-bottom: 43px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.slider__inner {
+  margin-bottom: 17px;
+  position: relative;
+}
+.slider__inner::before,
+.slider__inner::after {
+  content: "";
+  position: absolute;
+  height: 62px;
+  width: 100%;
+  background-color: rgba(232, 96, 60, 0.8);
+  top: 0;
+}
+.slider__inner::before {
+  right: calc(100% + 15px);
+}
+.slider__inner::after {
+  left: calc(100% + 15px);
+}
+
+.slick-slide {
+  outline: none;
+}
+.slick-prev {
+  left: 26px;
+  z-index: 1;
+}
+.slick-next {
+  right: 23px;
+}
+.slick-arrow {
+  width: 36px;
+  height: 52px;
+}
+.slider__item {
+  min-height: 401px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.slider__description {
+  /* display: inline-block; */
+  background-color: rgba(232, 102, 60, 0.8);
+  padding: 22px 29px 25px 19px;
+  max-width: 413px;
+  min-height: 124px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 33px;
+  left: 36px;
+}
+.slider__item-title {
+  text-transform: uppercase;
+  font-family: "Bebas";
+  font-size: 18px;
+  margin-bottom: 20px;
+  word-spacing: 2px;
+}
+.slider__item-mini {
+  width: 140px;
+  height: 120px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.slider__item-mini + .slider__item-mini {
+  margin-left: 20px;
+}
+/* 
+slider end 
+*/
+.blog {
+  margin-bottom: 45px;
+}
+.blog__inner {
+  display: flex;
+}
+.blog__item {
+  width: 275px;
+}
+.blog__item + .blog__item {
+  margin-left: 46px;
+}
+.blog__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.blog__item-image {
+  margin-right: 25px;
+}
+.blog__item-title {
+  text-transform: uppercase;
+  color: #e8663c;
+  font-family: "Bebas";
+  font-size: 18px;
+  line-height: 24px;
+  word-spacing: 2px;
+}
+.blog__item-text {
+  color: #414141;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+.blog__item-button a {
+  text-transform: uppercase;
+  font-family: "Bebas";
+  line-height: 24px;
+  color: #fff;
+  background-color: #e8663c;
+  padding: 3px 15px 4px 13px;
+}
+.work {
+  margin-bottom: 48px;
+}
+.work__header {
+  margin-bottom: 23px;
+  background-image: url(../images/line-2.png);
+  display: flex;
+  align-items: center;
+}
+
+.work__header-title {
+  font-family: "Bebas";
+  font-size: 18px;
+  word-spacing: 2px;
+  color: #e8603c;
+  display: inline-block;
+  min-width: 132px;
+  background-image: url(../images/body-bg.jpg);
+  padding-right: 20px;
+}
+
+.work__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.work__inner-link {
+  width: 220px;
+}
+.work__inner-link + .work__inner-link {
+  margin-left: 10px;
+}
+
+.work__inner-link a {
+  outline: none;
+}
+.link__img {
+  margin-bottom: -3px;
+}
+.link__description {
+  border: 1px solid #dbdbdb;
+  border-top: none;
+  padding: 17px 13px 13px 13px;
+  font-family: "Bebas";
+  word-spacing: 2px;
+  line-height: 18px;
+  width: 220px;
+}
+.link__description > a {
+  display: block;
+}
+
+.link__subtitle {
+  color: #b9b9b9;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.link__date {
+  color: #e8663c;
+  font-size: 11px;
+}
+.slick-next.slick-arrow.work-arrow {
+  right: 10px;
+}
+.slick-prev.slick-arrow.work-arrow {
+  left: 10px;
+}
+
+/* 
+FOOTER
+*/
+.footer {
+  overflow: hidden;
+}
+.footer__inner {
+  background-color: #e8663c;
+  padding: 40px 40px 40px 35px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.footer__inner::after,
+.footer__inner::before {
+  background-color: rgba(232, 96, 60, 0.8);
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.footer__inner::after {
+  right: calc(100% + 15px);
+}
+.footer__inner::before {
+  left: calc(100% + 15px);
+}
+
+.footer-about {
+  width: 260px;
+}
+.footer-about p + p {
+  margin-top: 20px;
+}
+.footer__title {
+  font-family: "Bebas";
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 27px;
+}
+.footer-widget {
+  width: 215px;
+}
+.footer-widget__message {
+  line-height: 14px;
+}
+.footer-widget__message a {
+  color: #f3b29d;
+}
+.message__time {
+  padding-top: 8px;
+  margin-bottom: 20px;
+}
+.footer-widget__follow a {
+  color: #f1b09b;
+  line-height: 14px;
+}
+.footer-contact {
+  width: 252px;
+}
+.footer-contact__text {
+  margin-bottom: 15px;
+}
+.footer-contact__details a {
+  color: #ffffff;
+  display: block;
+}
+.footer-contact__socials {
+  margin-top: 21px;
+}
