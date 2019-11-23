@@ -58,9 +58,12 @@
     width: 100%;
     text-align: center;
   }
+  .header__menu-list li a{
+    display: block;
+  }
   .header__menu li + li {
     margin-left: 0px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   .header__menu-mini {
     display: block;
